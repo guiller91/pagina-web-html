@@ -5,6 +5,7 @@ body {
     font-size: 12px;
     background-image: linear-gradient(rgba(5, 10, 5, 0.80), rgba(14, 4, 4, 0.8)), url(fondo.jpg);
     background-repeat: no-repeat;
+    
   }
 
   #container {
@@ -221,9 +222,9 @@ body {
 
 }
 
-.navbar ul li a {
+.navbar ul li a,.submenu {
     text-decoration: none;
-    color: white;
+    color: #fff;
     font-family: Roboto, "sans-serif";
     font-size: 1.2rem;
 }
@@ -235,14 +236,34 @@ body {
     background: yellowgreen;
     position: absolute;
     left: 0;
-    bottom: -12px;
+    bottom: -2px;
     transition: 0.4s ease-out;
 }
 
 .navbar ul li:hover::before {
     width: 100%;
 }
-
+.submenu{
+  position: absolute;
+  background:rgba(5, 10, 5, 0.80);
+  width: 200%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1.4s;
+  z-index: 1;
+}
+.submenu li a{
+	display: block;
+	padding: 10px;
+	color: #fff;
+  
+	
+	
+}
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1.5;
+}
 
 @media (max-width: 768px) {
     

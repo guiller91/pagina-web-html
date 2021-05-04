@@ -29,6 +29,7 @@ body{
 .container-tarjeta{
     position: relative;
     clip-path: polygon(0 0,100% 0, 100% 85%, 0 100%);
+    
 }
 img{
     width:100%;
@@ -113,13 +114,35 @@ img{
     background: yellowgreen;
     position: absolute;
     left: 0;
-    bottom: -12px;
+    bottom: -2px;
     transition: 0.4s ease-out;
 }
 
 .navbar ul li:hover::before {
     width: 100%;
 }
+.submenu{
+    position: absolute;
+    background:rgba(5, 10, 5, 0.80);
+    width: 200%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.4s;
+    z-index: 1;
+    
+    
+  }
+  .submenu li a{
+      display: block;
+      padding: 10px;
+      color: #fff;
+         
+  }
+  .menu li:hover .submenu{
+      visibility: visible;
+      opacity: 1.5;
+      
+  }
 
 @media (max-width: 768px) {
     
