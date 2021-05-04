@@ -8,10 +8,13 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
+
 }
 #img2,#img3{
     box-shadow: 0px 5px 10px rgba(253, 253, 253, 0.959);
     border-radius: 20px;
+=======
+
 }
 
 #cabecera{
@@ -19,11 +22,18 @@ body{
     height: 80px;
     z-index: 5;
     text-align: center;
+
     color: rgb(0, 0, 0);
     font-family: fantasy;
     font-size: 50px;
     padding-top: 20px;
     text-shadow: 0px 5px 5px rgba(253, 253, 253, 0.959);    
+
+    color: rgb(226, 108, 108);
+    font-family: fantasy;
+    font-size: 50px;
+    padding-top: 20px;     
+
 }
 
 *{
@@ -76,6 +86,14 @@ body{
 .menu li:hover .submenu{
 
     display: block;
+
+}
+
+img{
+    width: 55%;
+    height: 75%;
+    margin: 30px;
+=======
 }
 
 img{
@@ -90,6 +108,16 @@ h3{
     margin: 2%;
     color: rgb(231, 228, 228);
     font-family: 'Times New Roman', Times, serif;
+
+}
+
+h3{
+    position: absolute;
+
+    width: 45%;
+    margin: 2%;
+    color: rgb(231, 228, 228);
+    font-family: 'Times New Roman', Times, serif;
 }
 
 aside {
@@ -100,6 +128,14 @@ aside {
     color: rgb(231, 228, 228);
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
+=======
+    width: 29%;
+    top: 20%;
+    left: 69%;
+    color: rgb(231, 228, 228);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
  }
   
   
