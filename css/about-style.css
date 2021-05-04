@@ -1,12 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-   
-    
+  
 } 
 body{
     background: #181818;
-    background-image: linear-gradient(rgba(5, 10, 5, 0.80), rgba(14, 4, 14, 0.8)), url(fondo.jpg);
+    background-image: linear-gradient(rgba(5, 10, 5, 0.80), rgba(14, 4, 4, 0.8)), url(fondo.jpg);
     color: #fff;
     padding: 0 1.5em;  
     place-items: center center;
@@ -121,11 +120,6 @@ img{
 .navbar ul li:hover::before {
     width: 100%;
 }
-
-
-
-
-/* responsive */
 
 @media (max-width: 768px) {
     

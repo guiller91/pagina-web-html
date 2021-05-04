@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas de actuación</title>
+    <script type="text/javascript" charset="utf-8">
+        function hasClassName(inElement, inClassName)
+        {
+            var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)');
+            return regExp.test(inElement.className);
+        }
+    
+        function addClassName(inElement, inClassName)
+        {
+            if (!hasClassName(inElement, inClassName))
+                inElement.className = [inElement.className, inClassName].join(' ');
+        }
+    
+        function removeClassName(inElement, inClassName)
+        {
+            if (hasClassName(inElement, inClassName)) {
+                var regExp = new RegExp('(?:^|\\s+)' + inClassName + '(?:\\s+|$)', 'g');
+                var curClasses = inElement.className;
+                inElement.className = curClasses.replace(regExp, ' ');
+            }
+        }
+    
+        function toggleClassName(inElement, inClassName)
+        {
+            if (hasClassName(inElement, inClassName))
+                removeClassName(inElement, inClassName);
+            else
+                addClassName(inElement, inClassName);
+        }
+    
+        function toggleShape()
+        {
+          var shape = document.getElementById('shape');
+          if (hasClassName(shape, 'ring')) {
+            removeClassName(shape, 'ring');
+            addClassName(shape, 'cube');
+          } else {
+            removeClassName(shape, 'cube');
+            addClassName(shape, 'ring');
+          }
+          
+          // Move the ring back in Z so it's not so in-your-face.
+          var stage = document.getElementById('stage');
+          if (hasClassName(shape, 'ring'))
+            stage.style.webkitTransform = 'translateZ(-200px)';
+          else
+            stage.style.webkitTransform = '';
+        }
+        
+        function toggleBackfaces()
+        {
+          var backfacesVisible = document.getElementById('backfaces').checked;
+          var shape = document.getElementById('shape');
+          if (backfacesVisible)
+            addClassName(shape, 'backfaces');
+          else
+            removeClassName(shape, 'backfaces');
+        }
+      </script>
+      <link rel="stylesheet" href="css/actuacion.css">
+</head>
+<nav>
+    <div class="container">
+        <div class="navbar">
+            <img src="css/logo.png" class="logo" alt="Main Logo">
+
+
+             <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="quienesSomos.html">Quienes somos</a></li>
+                <li><a href="areaActuacion.html">Areas de actuación</a></li>
+                <li><a href="formulario.html">Contacto</a></li>
+                <li>Desplegable
+                  <ul class="submenu">
+                    <li>Noticias</li>
+                    <li>Publicaciones</li>
+                    <li>Localización</li>
+                  </ul>
+                </li>
+            </ul>
+    </div>
+</nav>
+<body>
+    <div class="controls">
+        <h1>Area de actuación</h1>
+        <p>Como esta página era de estilo libre y realmente no sabia que areas de actuación podria tener la temática de esta web, salvo que me ponga a explicarte porque 
+            Illidan o Arthas son los personajes más queridos del Wow, para poder practicar y curiosear un poco he añadido un poco de js.
+        </p>
+        <p>Dando al boton <span>Convertir</span> podras cambiar el diseño.</p>
+        
+        <div><button onclick="toggleShape()" class="button">Convertir</button></div>
+        <p>Marcando la casilla veras la cara interna</p>
+        <div><input type="checkbox" id="backfaces" onclick="toggleBackfaces()" checked=""><label for="backfaces">Cara interna visible</label></div>
+      </div>
+    
+      <div id="container">
+        <div id="stage" style="transform: translateZ(-200px);">
+          <div id="shape" class=" backfaces ring">
+            <div class="plane one">1</div>
+            <div class="plane two">2</div>
+            <div class="plane three">3</div>
+            <div class="plane four">4</div>
+            <div class="plane five">5</div>
+            <div class="plane six">6</div>
+            <div class="plane seven">7</div>
+            <div class="plane eight">8</div>
+            <div class="plane nine">9</div>
+            <div class="plane ten">10</div>
+            <div class="plane eleven">11</div>
+            <div class="plane twelve">12</div>
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
