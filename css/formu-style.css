@@ -64,6 +64,7 @@ body{
     border-bottom: 1px solid #d63031;
     color: #fff;
     display:block;
+    resize: none;
 }
 .contact-form form button{
     background: #b70e21;
