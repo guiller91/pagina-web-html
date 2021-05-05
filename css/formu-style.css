@@ -2,10 +2,14 @@
     box-sizing: border-box;
 } 
 body{
-    background: #181818;
-    color: #fff;
-    font-family: 'Indie Flower', cursive;
-    padding: 0 1.5em;
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Grande', Verdana, Arial;
+    font-size: 12px;
+    background-image: linear-gradient(rgba(5, 10, 5, 0.80), rgba(14, 4, 4, 0.8)), url(fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 .content{
     max-width: 1170px;
@@ -124,3 +128,4 @@ body{
         text-align: left;
     }
 }
+
